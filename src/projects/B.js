@@ -1,14 +1,13 @@
 import { drawProjectHtml } from "../tools/drawProjectHTML.js"
 import { isNumber } from "../tools/isNumber.js"
 import { sendANewResponse } from "../tools/response.js"
-import { createTheProjectB } from "./B.js"
 
-export function createTheProjectA(){
+export function createTheProjectB(){
    drawProjectHtml(
-      "A", 
-      "Neste Projeto se lê a temperatura em celsius e o converte para Farenheit", 
+      "B", 
+      "Neste Projeto se lê a temperatura em Farenheit e o converte para celsius", 
       1, 
-      ["Inserir o temperatura(Cº)"], 
+      ["Inserir o temperatura(Fº)"], 
       true
     )
 
@@ -21,14 +20,14 @@ export function createTheProjectA(){
             const {boolNumber, valueNumber} = isNumber(input1.value)
 
             if(boolNumber){
-                const farenheit = (9 * valueNumber + 160) / 5;
+                const celsius = ((valueNumber - 32) * 5) / 9
 
                 sendANewResponse(
                     "Resposta", 
-                    `${valueNumber}ºC em farenheits é: ${farenheit}ºF`,
+                    `${valueNumber}ºF em Celcius é: ${celsius}ºC`,
                     "var(--color2)",
                     createTheProjectB,
-                    "ProjetoB",
+                    "ProjetoC",
                     false
                 )
             }

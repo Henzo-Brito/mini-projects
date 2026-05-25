@@ -8,7 +8,8 @@
     --colorw: rgb(255, 250, 242);
     --color1: rgb(255, 156, 26);
     --color2: rgb(87, 143, 255);
-    --color3: rgb(0, 0, 0);
+    --color3: rgba(0, 0, 0, 0.777);
+    --color4: rgb(245, 20, 61);
     --font1: "SN PRO",'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -44,7 +45,7 @@ body{
 
 .input{
     width: 100%;
-    font-size: clamp(15px, 2dvw, 18px);
+    font-size: clamp(20px, 2.2dvw, 23px);
     border: none;
     outline: none;
     padding: 10px;
@@ -106,10 +107,14 @@ body{
         height: 55%;
     }
 
-    & .submit{
-        height: 20%;
-        background-color: var(--color3);
-        color: var(--colorw);
+    & .cont{
+        width: 100%;
+
+        & .submit{
+            height: 100%;
+            background-color: var(--color3);
+            color: var(--colorw);
+        }
     }
 }
 
