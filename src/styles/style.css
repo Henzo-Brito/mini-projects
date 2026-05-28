@@ -10,7 +10,23 @@
     --color2: rgb(87, 143, 255);
     --color3: rgba(0, 0, 0, 0.777);
     --color4: rgb(245, 20, 61);
+    --color5: rgb(36, 15, 3);
     --font1: "SN PRO",'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+::-webkit-scrollbar{
+    background-color: var(--color2);
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 128, 0, 0.683);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--color5);
 }
 
 body{
@@ -71,14 +87,13 @@ body{
 }
 
 .message{
-
     position: absolute;
     top: 2dvw;
     left: calc(50% - (clamp(260px, 40dvw, 450px))/2);
     width: clamp(260px, 40dvw, 450px);
     background-color: var(--color2);
     height: 25dvh;
-    animation: .5s newMessage, cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation: .35s newMessage, cubic-bezier(0.165, 0.84, 0.44, 1);
 
     display: none;
     align-items: center;
@@ -138,5 +153,145 @@ body{
     100%{
         opacity: 1;
         top: 2dvw;
+    }
+}
+
+@keyframes returnMessage {
+    0%{
+        opacity: 1;
+        top: 2dvw;
+    }
+
+    100%{
+        opacity: 0;
+        top: -25dvh;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    @keyframes newMessage{
+        0%{
+            opacity: 0;
+            top: 100dvh;
+        }
+        100%{
+            opacity: 1;
+            top: 75dvh;
+        }
+    }
+
+    @keyframes returnMessage {
+        0%{
+            opacity: 1;
+            top: 75dvh;
+        }
+
+        100%{
+            opacity: 0;
+            top: 100dvh;
+        }
+    }
+
+    .message{
+        left: 0;
+        width: 100dvw;
+        top: 75dvh;
+        border-radius: 10px 10px 0 0;
+    }
+    
+}
+
+
+.btnmenu{
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    z-index: 1;
+    font-size: clamp(25px, 2.2dvw, 28px);
+    cursor: pointer;
+    transition: .5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.menu{
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: clamp(250px, 24dvw,300px);
+    background-color: var(--color5);
+    height: 100dvh;
+    animation: .5s enterMenu cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    color: var(--colorw);
+    
+    & .title{
+        width: calc(clamp(250px, 24dvw,300px) - (clamp(25px, 2.2dvw, 28px) + 40px));
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding: 10px;
+        margin-left: calc(clamp(25px, 2.2dvw, 28px) + 20px);
+    }
+    
+    & h2{
+        margin-left: 10px;
+    }
+    
+    & .project{
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;        
+        width: 100%;
+        cursor: pointer;
+
+        & p{
+            font-size: clamp(18px, 2dvw, 22px);
+        }
+
+        & .emoji{
+            width: 20px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        & .text{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .settings{
+        height: 18%;
+    }
+
+    & .project:hover{
+        background-color: var(--color3);
+    }
+
+    & .projects{
+        overflow-y: scroll;
+        margin-top: 10px;
+        height: 82%;
+    }
+
+}
+
+@keyframes enterMenu {
+    0%{
+        left: calc(clamp(250px, 24dvw,300px) * -1);
+    }
+    100%{
+        left: 0;
+    }
+}
+
+@keyframes closeMenu {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: calc(clamp(250px, 24dvw,300px) * -1);
     }
 }

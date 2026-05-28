@@ -1,6 +1,7 @@
 import { drawProjectHtml } from "../tools/drawProjectHTML.js"
 import { isNumber } from "../tools/isNumber.js"
 import { sendANewResponse } from "../tools/response.js"
+import { createTheProjectC } from "./C.js"
 
 export function createTheProjectB(){
    drawProjectHtml(
@@ -26,8 +27,8 @@ export function createTheProjectB(){
                     "Resposta", 
                     `${valueNumber}ºF em Celcius é: ${celsius}ºC`,
                     "var(--color2)",
-                    createTheProjectB,
-                    "ProjetoC",
+                    createTheProjectC,
+                    "Projeto C",
                     false
                 )
             }

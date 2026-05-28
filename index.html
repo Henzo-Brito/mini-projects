@@ -9,11 +9,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
-    <script src="./src/projects/main.js" id="script" type="module" defer></script>
+    <script src="./src/projects/main.js" id="script" type="module" defer></script>    
+    <script src="./src/tools/menu.js" type="module" defer></script>
+
+
     <link rel="stylesheet"  href="./src/styles/style.css">
 </head>
 <body>
     <main class="container" id="main"></main>
     <div class="message" id="msg"></div>
+    
+    <i class="btnmenu fa-solid fa-bars" id="btnmenu"></i>
+
+    <div class="menu" id="menu">
+        <h3 class="title" id="menuTitle">Início</h3>
+
+        <h2>Projetos</h2>
+
+        <div class="projects" id="projects"></div>
+
+        <div class="settings">
+            <div class="project">
+                <i class="fa-solid fa-gear" style="font-size: 20px;"></i>
+                <h2 class="text">Configuração</h2>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
