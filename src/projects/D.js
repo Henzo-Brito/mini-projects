@@ -2,7 +2,7 @@ import { drawProjectHtml } from "../tools/drawProjectHTML.js"
 import { isNumber } from "../tools/isNumber.js"
 import { sendANewResponse } from "../tools/response.js"
 
-import { createTheProjectB } from "./B.js"
+import { createTheProjectE } from "./E.js"
 
 export function createTheProjectD(){
     drawProjectHtml(
@@ -25,19 +25,19 @@ export function createTheProjectD(){
 
             if(tempo.boolNumber && velocidade.boolNumber){
                 const dist = tempo.valueNumber * velocidade.valueNumber;
-                const litros = Math. dist/12;
+                const litros = dist/12;
 
                 sendANewResponse(
                     "Resposta", 
                     `
                         Velocidade: ${velocidade.valueNumber}km/h \n
                         Tempo gasto: ${tempo.valueNumber}h \n
-                        Distância percorrida: ${dist}km \n
-                        Litros gastos: ${litros}L
+                        Distância percorrida: ${dist.toFixed(2)}km \n
+                        Litros gastos: ${litros.toFixed(2)}L
                     `,
                     "var(--color2)",
-                    createTheProjectB,
-                    "Projeto C",
+                    createTheProjectE,
+                    "Projeto E",
                     false
                 )
             }

@@ -40,16 +40,20 @@ function alterStateMenu(){
     }
 }
 
-import { createTheProjectA } from "../projects/A.js"
-import { createTheProjectB } from "../projects/B.js"
-import { createTheProjectC } from "../projects/C.js"
-import { createTheProjectD } from "../projects/D.js"
-import { initalizeMain } from "../projects/main.js"
+import { createTheProjectA,
+    createTheProjectB,
+    createTheProjectC,
+    createTheProjectD,
+    createTheProjectE,
+    createTheProjectF,
+    createTheProjectG,
+    initalizeMain
+} from "../projects/allPages.js"
 
 const Menus = [
     {
         openFunc: initalizeMain,
-        name: "Home",
+        name: "Início",
         emoji: "<i class='fa-solid fa-house'></i>"
     },
     {
@@ -69,6 +73,18 @@ const Menus = [
         openFunc: createTheProjectD,
         name: "Projeto D",
         emoji: "D"
+    },{
+        openFunc: createTheProjectE,
+        name: "Projeto E",
+        emoji: "E"
+    },{
+        openFunc: createTheProjectF,
+        name: "Projeto F",
+        emoji: "F"
+    },{
+        openFunc: createTheProjectG,
+        name: "Projeto G",
+        emoji: "G"
     }
 ]
 

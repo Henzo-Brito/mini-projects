@@ -233,6 +233,20 @@ body{
         margin-left: calc(clamp(25px, 2.2dvw, 28px) + 20px);
     }
     
+    & .topper{
+        height: 11%;
+    }
+    
+    .settings{
+        height: 10%;
+    }
+    
+    & .projects{
+        overflow-y: scroll;
+        padding-top: 20px;
+        height: 80%;
+    }
+
     & h2{
         margin-left: 10px;
     }
@@ -264,18 +278,9 @@ body{
         }
     }
 
-    .settings{
-        height: 18%;
-    }
 
     & .project:hover{
         background-color: var(--color3);
-    }
-
-    & .projects{
-        overflow-y: scroll;
-        margin-top: 10px;
-        height: 82%;
     }
 
 }

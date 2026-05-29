@@ -2,14 +2,14 @@ import { drawProjectHtml } from "../tools/drawProjectHTML.js"
 import { isNumber } from "../tools/isNumber.js"
 import { sendANewResponse } from "../tools/response.js"
 
-import { createTheProjectD } from "./D.js"
+import { createTheProjectG } from "./G.js"
 
-export function createTheProjectC(){
+export function createTheProjectF(){
     drawProjectHtml(
-      "C", 
-      "Neste Projeto calcula-se o valor do volume de uma lata de óleo, através do seu raio(cm) e altura(cm)", 
+      "F", 
+      "Este programa Troca o valor de duas variáveis.", 
       2, 
-      ["Inserir o Raio(cm)", "Inserir a Altura(cm)"], 
+      ["Inserir o valor(A)", "Inserir o valor(B)"], 
       true
     )
 
@@ -20,20 +20,23 @@ export function createTheProjectC(){
 
     button.addEventListener("click",()=>{
         if(input1.value && input2.value){
-            const raio = isNumber(input1.value)
-            const altura = isNumber(input2.value)
+            let A = isNumber(input1.value)
+            let B = isNumber(input2.value)
             
-            console.log(raio, altura)
-
-            if(raio.boolNumber && altura.boolNumber){
-                const volume = Math.PI *raio.valueNumber**2 * altura.valueNumber
+            if(A.boolNumber && B.boolNumber){
+                let troca = A;
+                A = B;
+                B = troca
                 
                 sendANewResponse(
                     "Resposta", 
-                    `O volume da lata de óleo é: ${volume.toFixed(2)}cm³`,
-                    "var(--color2)",
-                    createTheProjectD,
-                    "Projeto D",
+                    `
+                        Valor de A: ${A.valueNumber}
+                        Valor de B: ${B.valueNumber}
+                    `,
+                    "var(--color2)",    
+                    createTheProjectG,
+                    "Projeto G",    
                     false
                 )
             }
