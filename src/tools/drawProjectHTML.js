@@ -1,5 +1,11 @@
+import { actualizeNamedMenu} from "./menu.js"
+import { closeResponse } from "./response.js"
 
 export function drawProjectHtml(title="New Project", description="", inputs=0, placeholders=[], submit=true){
+    actualizeNamedMenu("Projeto " + title)
+
+    closeResponse()
+
     const main = document.getElementById("main")
     
     let inputsDiv = ""

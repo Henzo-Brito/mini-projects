@@ -5,13 +5,25 @@ let clicked = false
 
 let rotation = 0
 
-btnMenu.addEventListener("click",alterStateMenu)
+btnMenu.addEventListener("click", alterStateMenu)
+
+let actualMenu = "home"
+
+function actualizeNamedMenu(str){
+    actualMenu = str
+}
+
+export {actualizeNamedMenu}
 
 function alterStateMenu(){
+    const titleMenu = document.getElementById("menuTitle");
+    titleMenu.innerText = actualMenu
+    
     clicked = !clicked
 
     rotation += 90
     btnMenu.style.rotate = `${rotation}deg`
+
 
     if(clicked){
         btnMenu.style.color = "var(--color1)"
@@ -31,13 +43,19 @@ function alterStateMenu(){
 import { createTheProjectA } from "../projects/A.js"
 import { createTheProjectB } from "../projects/B.js"
 import { createTheProjectC } from "../projects/C.js"
-
+import { createTheProjectD } from "../projects/D.js"
+import { initalizeMain } from "../projects/main.js"
 
 const Menus = [
     {
+        openFunc: initalizeMain,
+        name: "Home",
+        emoji: "<i class='fa-solid fa-house'></i>"
+    },
+    {
         openFunc: createTheProjectA,
         name: "Projeto A",
-        emoji: "F"
+        emoji: "A"
     },
     {
         openFunc: createTheProjectB,
@@ -47,6 +65,10 @@ const Menus = [
         openFunc: createTheProjectC,
         name: "Projeto C",
         emoji: "C"
+    },{
+        openFunc: createTheProjectD,
+        name: "Projeto D",
+        emoji: "D"
     }
 ]
 
@@ -65,6 +87,7 @@ function setMenu(){
 
         project.addEventListener("click", ()=>{
             menu.openFunc()
+            actualMenu = menu.name
             alterStateMenu()
         })
 

@@ -2,12 +2,12 @@ import { drawProjectHtml } from "../tools/drawProjectHTML.js"
 import { isNumber } from "../tools/isNumber.js"
 import { sendANewResponse } from "../tools/response.js"
 
-import { createTheProjectB } from "./B.js"
+import { createTheProjectD } from "./D.js"
 
 export function createTheProjectC(){
-   drawProjectHtml(
+    drawProjectHtml(
       "C", 
-      "Neste Projeto calcula-se o valor do volume de uma lata de óleo, através do seu raio e altura", 
+      "Neste Projeto calcula-se o valor do volume de uma lata de óleo, através do seu raio(cm) e altura(cm)", 
       2, 
       ["Inserir o Raio(cm)", "Inserir a Altura(cm)"], 
       true
@@ -20,18 +20,20 @@ export function createTheProjectC(){
 
     button.addEventListener("click",()=>{
         if(input1.value && input2.value){
-            const {boolNumber1, raio} = isNumber(input1.value)
-            const {boolNumber2, altura} = isNumber(input2.value)
+            const raio = isNumber(input1.value)
+            const altura = isNumber(input2.value)
+            
+            console.log(raio, altura)
 
-            if(boolNumber1 && boolNumber2){
-                const volume = Math.PI() *raio**2 * altura
-
+            if(raio.boolNumber && altura.boolNumber){
+                const volume = Math.PI *raio.valueNumber**2 * altura.valueNumber
+                
                 sendANewResponse(
                     "Resposta", 
                     `O volume da lata de óleo é: ${volume}cm³`,
                     "var(--color2)",
-                    createTheProjectB,
-                    "Projeto C",
+                    createTheProjectD,
+                    "Projeto D",
                     false
                 )
             }

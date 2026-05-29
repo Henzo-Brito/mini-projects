@@ -2,7 +2,7 @@ import { drawProjectHtml } from "../tools/drawProjectHTML.js"
 
 import { createTheProjectA } from "./A.js";
 
-function initalizeMain(){
+export function initalizeMain(){
     drawProjectHtml(
         "do Henzo 👋", 
         "Este site tem vários projetos para apenas um HTML, clique em ☰ e veja todos eles.", 

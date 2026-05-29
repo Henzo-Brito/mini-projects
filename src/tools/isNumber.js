@@ -3,8 +3,6 @@ import { sendANewResponse } from "./response.js";
 export function isNumber(value){
     let numb = Number(value)
 
-    console.log(numb)
-
     if (isNaN(numb)){
         sendANewResponse(
             "Erro de Input",

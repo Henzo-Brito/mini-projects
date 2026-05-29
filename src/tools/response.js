@@ -1,4 +1,5 @@
 let time;
+const message = document.getElementById("msg")
 
 export function sendANewResponse(
     title = "newMessage",
@@ -8,8 +9,6 @@ export function sendANewResponse(
     msgSubmit = "Fechar",
     haveTime = true
 ){
-    const message = document.getElementById("msg")
-
     if(!message) return
 
     message.innerHTML = `
@@ -32,13 +31,7 @@ export function sendANewResponse(
 
     if(haveTime){
         time = setTimeout(() => {
-
-            message.style.animation = "returnMessage 0.25s forwards"
-
-            setTimeout(() => {
-                message.style.display = "none"
-            }, 250)
-
+            closeResponse()
         }, 2500)
     }
 
@@ -46,13 +39,15 @@ export function sendANewResponse(
 
     btnSubmit.onclick = () => {
         fun()
-
         clearTimeout(time)
-
-        message.style.animation = "returnMessage 0.25s forwards"
-
-        setTimeout(() => {
-            message.style.display = "none"
-        }, 250)
+        closeResponse()
     }
+}
+
+export function closeResponse(){
+    message.style.animation = "returnMessage 0.25s forwards"
+
+    setTimeout(() => {
+        message.style.display = "none"
+    }, 250)
 }
