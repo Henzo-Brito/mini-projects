@@ -13,7 +13,7 @@ export function initalizeMain(){
     const button = document.getElementById("submit")
     
     button.innerText = "Projeto A";
-    
+        
     button.addEventListener("click",()=>{
         createTheProjectA()
     })

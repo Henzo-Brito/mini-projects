@@ -6,6 +6,9 @@ import { createTheProjectE } from "./E.js";
 import { createTheProjectF } from "./F.js";
 import { createTheProjectG } from "./G.js";
 import { initalizeMain } from "./main.js";
+import { createTheProjectH } from "./H.js";
+import { createTheProjectI } from "./I.js";
+import { createTheProjectJ } from "./J.js";
 
 export {
     createTheProjectA,
@@ -15,5 +18,8 @@ export {
     createTheProjectE,
     createTheProjectF,
     createTheProjectG,
+    createTheProjectH,
+    createTheProjectI,
+    createTheProjectJ,
     initalizeMain
 }

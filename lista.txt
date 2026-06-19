@@ -29,9 +29,11 @@ forma de combinação. Considerando a leitura de valores para as variáveis A, B
  variável C, a variável A com a variável D. Depois é necessário combinar a variável B com a variável C e a 
  variável B com a variável D e, por fim, a variável C será combinada com a variável D. 
  
-h) Elaborar um programa que calcule e apresente o valor do volume de uma caixa retangular, utilizando a fórmula VOLUME= COMPRIMENTO* LARGURA* ALTURA.
+h) Elaborar um programa que calcule e apresente o valor do volume de uma caixa retangular, utilizando a 
+fórmula VOLUME= COMPRIMENTO* LARGURA* ALTURA.
 
 i) Efetuar a leitura de um valor numérico inteiro e apresentar o resultado do valor lido elevado ao quadrado. 
 
-j) Ler dois valores numéricos inteiros (representados pelas variáveis A e B) e apresentar o resultado do quadrado da diferença do primeiro valor (variável A) em relação ao segundo valor (variável B) . 
+j) Ler dois valores numéricos inteiros (representados pelas variáveis A e B) e apresentar o resultado do 
+quadrado da diferença do primeiro valor (variável A) em relação ao segundo valor (variável B) . 
 

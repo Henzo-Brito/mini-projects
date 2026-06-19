@@ -47,6 +47,9 @@ import { createTheProjectA,
     createTheProjectE,
     createTheProjectF,
     createTheProjectG,
+    createTheProjectH,
+    createTheProjectI,
+    createTheProjectJ,
     initalizeMain
 } from "../projects/allPages.js"
 
@@ -85,6 +88,18 @@ const Menus = [
         openFunc: createTheProjectG,
         name: "Projeto G",
         emoji: "G"
+    },{
+        openFunc: createTheProjectH,
+        name: "Projeto H",
+        emoji: "H"
+    },{
+        openFunc: createTheProjectI,
+        name: "Projeto I",
+        emoji: "I"
+    },{
+        openFunc: createTheProjectJ,
+        name: "Projeto J",
+        emoji: "J"
     }
 ]
 
