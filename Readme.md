@@ -68,6 +68,12 @@ Utilizando todas as combinações possíveis entre os valores.
 
 ## 📦 Como Executar o Projeto
 
+Acesse o Hyperlink:
+
+https://henzo-brito.github.io/mini-projects/
+
+Ou
+
 ### 1. Clone o repositório
 
 ```bash
