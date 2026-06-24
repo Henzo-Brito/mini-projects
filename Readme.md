@@ -95,21 +95,3 @@ Após iniciar o servidor, acesse o endereço exibido no terminal, normalmente:
 ```txt
 http://localhost:3000
 ```
-
----
-
-## 📚 Objetivo
-
-Este projeto foi desenvolvido com fins educacionais para praticar:
-
-* Estruturas de entrada e saída de dados
-* Operações matemáticas
-* Manipulação do DOM
-* JavaScript puro
-* Organização de projetos front-end
-
----
-
-## 👨‍💻 Autor
-
-Desenvolvido por **Henzo Brito**.
