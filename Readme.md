@@ -71,13 +71,13 @@ Utilizando todas as combinações possíveis entre os valores.
 ### 1. Clone o repositório
 
 ```bash
-git clone <url-do-repositorio>
+git clone https://github.com/Henzo-Brito/mini-projects.git
 ```
 
 ### 2. Acesse a pasta do projeto
 
 ```bash
-cd nome-do-projeto
+cd mini-projects
 ```
 
 ### 3. Inicie um servidor local
